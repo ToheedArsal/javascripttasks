@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+
+
+    <div style="text-align: center;">
+        <h1>
+            Current Date
+        </h1>
+            <p id="format1"></p>
+            <p id="format2"></p>
+            <p id="format3"></p>
+            <p id="format4"></p>
+    </div>
+    
+
+
+
+    <script>
+        const currentDate = new Date();
+
+        let day = currentDate.getDate();
+        let month = currentDate.getMonth() + 1 ;
+        let year = currentDate.getFullYear();
+        
+        if (day < 10)
+        {
+            day = '0' + day;
+        }
+
+        if(month < 10)
+        {
+            month = '0' + month;
+        }
+        //mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+        let format1 = month + '-' + day + '-' + year;
+        let format2 = month + '/' + day + '/' + year;
+        let format3 = day + '-' + month + '-' + year;
+        let format4 = day + '/' + month + '/' + year;
+        
+
+        document.getElementById("format1").innerHTML = format1;
+        document.getElementById("format2").innerHTML = format2;
+        document.getElementById("format3").innerHTML = format3;
+        document.getElementById("format4").innerHTML = format4;
+    </script>
+</body>
+</html>

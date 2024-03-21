@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body onload="animateTheString()">
+    
+    <div style="text-align: center;">
+        <h1>
+            Rotate The String
+        </h1>
+        <p id="target" style="font-size: xx-large;">Toheed Arsal </p>
+
+
+
+    </div>
+   
+
+
+    <script>
+    
+
+    function animateTheString()
+    {
+        var htmlElement = document.getElementById("target");
+        var textNode = htmlElement.childNodes[0];
+        var text = textNode.data;
+
+        setInterval(function () {
+        text = text[text.length - 1] + text.substring(0, text.length - 1);
+        textNode.data = text;
+    }, 100);
+}
+        
+
+       
+
+
+
+    </script>
+</body>
+</html>

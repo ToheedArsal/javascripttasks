@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1>
+            Area of Triangle
+        </h1>
+        <p id="sides">
+
+        </p>
+        <p id="area">
+
+        </p>
+
+    </div>
+    
+    
+
+
+
+
+    <script>
+
+        let side1 = 3, side2 = 6, side3 = 7;
+
+        let semiPermiter = (side1 + side2 + side3) / 2;
+
+        let Area = Math.sqrt(semiPermiter * (semiPermiter - side1) * (semiPermiter - side2) * (semiPermiter - side3));
+
+        console.log(Area)
+
+        document.getElementById("sides").innerHTML = "Sides of the triangle are :" + side1 + "," + side2 + "," + side3;
+        document.getElementById("area").innerHTML = "Area of the triangle is :" + Area;
+
+
+
+    </script>
+</body>
+</html>

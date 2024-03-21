@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div style="text-align: center;">
+        <h2>Enter The Year</h2>
+        <input  value="" id="inputyear">
+        <button onclick="checkLeapYear()">submit</button>
+
+        <p id="output">
+
+        </p>
+    </div>
+
+
+    <script>
+
+        function checkLeapYear()
+        {
+            var year = document.getElementById("inputyear").value;
+            console.log(typeof(year));
+
+            if (year < 1582)   // as the gorgian calender start from 1582
+            {
+                document.getElementById("output").innerHTML = "Input A Valid Year";
+            }
+            else if ( year % 4 == 0 || year % 100 == 0 || year % 400 == 0)
+            {
+                document.getElementById("output").innerHTML = year + " Is A Leap Year";
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = year + " Is Not A Leap Year";
+            }
+           
+        }
+        
+    </script>
+    
+</body>
+</html>

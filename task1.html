@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+
+    
+
+    <div style="text-align: center;" id="date-time">
+        <h1> 
+            Clock
+        </h1>
+        <p id="day">
+
+        </p>
+        <p id="time">
+
+        </p>
+
+
+
+    </div>
+    
+
+
+
+    <script>
+
+
+
+        const dayOfTheWeek = 
+        {
+            0 : "Sunday",
+            1 : "Monday",
+            2 : "Tuesday",
+            3 : "Wednesday",
+            4 : "Thursday",
+            5 : "Friday",
+            6 : "Saturday", 
+        };
+
+        const currentDate = new Date();
+        let day = currentDate.getDay();
+        let hour = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        let seconds = currentDate.getSeconds();
+        let AmOrPm;
+
+        if ( hour >= 12 && hour < 24)
+        {
+            AmOrPm = "PM";
+        }
+        else if ( hour >= 0 && hour < 12)
+        {
+            AmOrPm = "AM";
+        }
+        else
+        {
+            AmOrPm = "Error";
+        }
+
+        if(hour>= 12)
+        {
+            hour = hour - 12;
+        }
+        
+        let time = hour + " " + AmOrPm + " : " + minutes + " : " + seconds;
+
+        console.log("Today is " + dayOfTheWeek[day]);
+        console.log("Current Time :" + time);
+
+
+        document.getElementById("day").innerHTML = "Today is " + " " + dayOfTheWeek[day];
+        document.getElementById("time").innerHTML = "Current Time :" + time;
+
+    </script>
+</body>
+</html>

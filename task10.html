@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10 </title>
+</head>
+<body>
+
+
+    <div style="text-align: center; padding-top: 50px;">
+        <h2>Multiply and Divide Calculator</h2>
+        <label for="number1">1st Number :</label>
+        <input type="text" id="number1" name="number1" value="">
+        <br><br>
+        <label for="number2">2nd Number:</label>
+        <input type="text" id="number2" name="number2" value="">
+        <br><br>
+
+        <button id="multiplyButton" onclick="multiplyNumbers()">Multiply</button>
+        <button id="DivideButton" onclick="divideNumbers()">Divide</button>
+
+        <p id="output">
+
+        </p>
+
+    </div>
+
+    <script>
+
+        function multiplyNumbers()
+        {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result = number1 * number2;
+            
+            document.getElementById("output").innerHTML = "Multiplication of " + number1 + " and " + number2 + " is :" + result;
+        }
+        function divideNumbers()
+        {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result = number1 / number2;
+            document.getElementById("output").innerHTML = "Division of " + number1 + " and " + number2 + " is :" + result;
+        }
+        
+    </script>
+</body>
+</html>
