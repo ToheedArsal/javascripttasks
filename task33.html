@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 31</title>
+    <title>Task 33</title>
 </head>
 <body style="text-align: center; padding-top: 100px;">
 
-    <h4>program to find the largest of three given integers</h4>
+    <h4> program to check whether two numbers are in the range 40..60 or 70..100 inclusive.</h4>
 
     <label for="number1"> Number 1 :</label>
     <input type="text" id="number1" value="" placeholder="Enter The First Number">
     <br><br>
     <label for="number2"> Number 2 :</label>
     <input type="text" id="number2" value="" placeholder="Enter The Second Number">
-    <br><br>
-    <label for="number3"> Number 3 :</label>
-    <input type="text" id="number3" value="" placeholder="Enter The Third Number">
     <br><br>
     <button onclick="check()"> Submit</button>
     <p id="output">
@@ -29,23 +26,19 @@
         {
             var number1 = parseFloat(document.getElementById("number1").value);
             var number2 = parseFloat(document.getElementById("number2").value);
-            var number3 = parseFloat(document.getElementById("number3").value);
-            var largest;
+           
 
-            if( number1 >= number2 && number1 >= number3)
+
+            if(((number1 >= 40 && number1 <= 60) || (number1 >= 70 && number1 <=100)) && ((number2 >= 40 && number2 <= 60) || (number2 >= 70 && number2 <=100)))
             {
-                largest = number1;
+                document.getElementById("output").innerHTML = "Numbers Are In The Range";
             }
-            else if (number2 >= number3 && number2 >= number1)
+            else 
             {
-                largest = number2;
-            }
-            else if (number3 >= number2 && number3 >= number1)
-            {
-                largest = number3;
+                document.getElementById("output").innerHTML = "Numbers Are Not In The Range";
             }
             
-            document.getElementById("output").innerHTML = "Largest Number Is :" + largest;
+            
             
         }
     </script>

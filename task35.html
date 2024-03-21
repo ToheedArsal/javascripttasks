@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 35</title>
+  </head>
+  <body style="text-align: center; padding-right: 100px">
+    <h4>
+        program to check whether a specified character exists between the 2nd and 4th positions in a given string. 
+    </h4>
+    <label for="input"> Enter The String :</label>
+    <input type="text" id="input" value="" placeholder="Enter The String" />
+    <br /><br />
+
+    <label for="input"> Enter The Character :</label>
+    <input type="text" id="inputchr" value="" placeholder="Enter The Character" />
+    <br /><br />
+    <button onclick="check()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+      function check() {
+        var str = document.getElementById("input").value;
+        var chr = document.getElementById("inputchr").value;
+        flag = false;
+        if(chr.lenth > 1)
+        {
+            document.getElementById("output").innerHTML = "Character Length Should Be One";
+        }
+        else
+        {
+            for( let i = 1; i < 4; i++)
+            {
+                if(str.charAt(i) == chr)
+                {
+                    flag = true;
+                    document.getElementById("output").innerHTML = "Character Is Present";
+                }
+            }
+            if ( flag == false)
+            {
+                document.getElementById("output").innerHTML = "Character Is Not Present";
+            }
+        }
+      }
+    </script>
+  </body>
+</html>
