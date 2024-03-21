@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task18</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+    
+    <h2>Check and Return true if one of the numbers is 50 or if their sum is 50.</h2>
+    <label for="number1">Number 1 :</label>
+    <input type="text" id="number1">
+    <br><br>
+    <label for="number2">Number 2 :</label>
+    <input type="text" id="number2" placeholder="Enter The Number2">
+    <br><br>
+    <button onclick="checkNumber()"> Check The Numbers</button>
+    <p id="output"></p>
+
+
+    <script>
+        function checkNumber()
+        {
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+
+            
+            if (number1 == 50 || number2 == 50 || ( number1 + number2 == 50))
+            {
+                document.getElementById("output").innerHTML = "True";
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = "False";
+            }
+
+        }
+    </script>
+</body>
+</html>

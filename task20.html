@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 20</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+    
+    <h1>Check The Integers if whether one is positive and other is negative</h1>
+    <label for="number1">Number1 :</label>
+    <input type="text" id="number1" value="" placeholder="Enter The Number1">
+    <br><br>
+    
+    <label for="number2">Number2 :</label>
+    <input type="text" id="number2" value="" placeholder="Enter The Number2">
+    <br><br>
+
+    <button onclick="checkNumbers()"> Check The Number</button>
+    <p id="output">
+
+    </p>
+
+
+    <script>
+        function checkNumbers()
+        {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+
+
+            console.log(number1);
+            console.log(number2);
+
+            if(( number1 < 0 && number2 > 0 ) || (number1 > 0 && number2 < 0 ))
+            {
+                document.getElementById("output").innerHTML = "True";
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = "False";
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 14</title>
+</head>
+<body style="text-align: center; padding-top: 80px;">
+
+    
+    <h2>Extract The Extension From FileName</h2>
+    <label for="input"> Enter The File Name :</label>
+    <input type="text" value="" id="input">
+    <br> <br>
+    <button onclick="extractExtension()"> Extract The Extension</button>
+    <p id="output"></p>
+
+
+    <script>
+
+        function extractExtension()
+        {
+            var filename = document.getElementById("input").value;
+
+            if (filename.includes("."))
+            {
+                var extension = filename.split('.').pop();
+                document.getElementById("output").innerHTML = "Extension is : " + extension;
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = "Invalid FileName";
+            }
+            
+            
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task19</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+    <h3> check whether a given integer is within 20 of 100 or 400.</h3>
+    <label for="number">Number :</label>
+    <input type="text"  id="number" value="" placeholder="Enter The Number">
+    <button onclick="checkTheNumber()">Check</button>
+    <p id="output"></p>
+
+
+
+    <script>
+        function checkTheNumber()
+        {
+            var number = parseFloat(document.getElementById("number").value);
+
+            if (( Math.abs (100 - number ) <= 20 ) || (Math.abs(400 - number) <= 20))
+            {
+                document.getElementById("output").innerHTML = "True";
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = "False";
+            }
+        }
+    </script>
+</body>
+</html>

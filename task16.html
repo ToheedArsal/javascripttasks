@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 16</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h2>Compute the Sum</h2>
+    <label for="number1">Number 1 :</label>
+    <input type="number" value="" id="number1" placeholder="Enter The Number 1">
+    <br><br>
+    <label for="number2">Number 2 :</label>
+    <input type="number" value="" id="number2" placeholder="Enter The Number 2">
+    <br><br>
+
+    <button onclick="computeSum()">Find Sum</button>
+    <p id = "output"> </p>
+
+
+    <script>
+        function computeSum()
+        {
+            var number1 = document.getElementById("number1").value;
+            var number2 = document.getElementById("number2").value;
+            number1  = parseInt(number1);
+            number2  = parseInt(number2);
+            var sum = number1 + number2;
+            if( number1 == number2 )
+            {
+                sum = sum * 3;
+            }
+            document.getElementById("output").innerHTML = "Sum Is : " + sum;
+        }
+    </script>
+</body>
+</html>
