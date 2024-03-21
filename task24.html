@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 24</title>
+  </head>
+  <body style="text-align: center; padding-right: 100px">
+    <h4>
+      program to create another string from a given string with the first
+      character of the given string added to the front and back
+    </h4>
+    <label for="input"> Enter The String :</label>
+    <input type="text" id="input" value="" placeholder="Enter The String" />
+    <br /><br />
+    <button onclick="createNewString()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+      function createNewString() {
+        var str = document.getElementById("input").value;
+
+        if (str.length >= 1) {
+          str = str.charAt(0) + str + str.charAt(0);
+          document.getElementById("output").innerHTML = "Output Is :" + str;
+        }else {
+          document.getElementById("output").innerHTML = "Invalid String";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 32</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h4>program to find the largest of three given integers</h4>
+
+    <label for="number1"> Number 1 :</label>
+    <input type="text" id="number1" value="" placeholder="Enter The First Number">
+    <br><br>
+    <label for="number2"> Number 2 :</label>
+    <input type="text" id="number2" value="" placeholder="Enter The Second Number">
+    <br><br>
+    <button onclick="check()"> Submit</button>
+    <p id="output">
+
+    </p>
+    
+
+    <script>
+        function check()
+        {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            var closestToHunderd;
+
+
+            if( Math.abs(100 - number1) < Math.abs(100 - number2))
+            {
+                closestToHunderd = number1;
+            }
+            else 
+            {
+                closestToHunderd = number2;
+            }
+            
+            document.getElementById("output").innerHTML = "Closet Number To 100 Is :" + closestToHunderd;
+            
+        }
+    </script>
+</body>
+</html>

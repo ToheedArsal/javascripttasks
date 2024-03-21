@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 22</title>
+  </head>
+  <body style="text-align: center; padding-right: 100px">
+    <h4>
+        program to remove a character at the specified position in a given string
+    </h4>
+    <label for="input"> Enter The String :</label>
+    <input type="text" id="input" value="" placeholder="Enter The String" />
+    <br><br>
+    <label for="index">Enter The Index :</label>
+    <input type="text" id="index" value="" placeholder="Enter The Index" />
+    <br><br>
+    <button onclick="createNewString()">Submit</button>
+    <p id="output"></p>
+
+
+
+    <script>
+        function createNewString()
+        {
+            var str= document.getElementById("input").value;
+            var index= parseInt(document.getElementById("index").value);
+
+            if( index >= str.length )
+            {
+                document.getElementById("output").innerHTML = "Position Is Not Valid";
+            }
+            else
+            {
+             str = str.substring(0, index ) + str.substring(index+1, str.length);
+             document.getElementById("output").innerHTML = "Modified String Is :" + str;
+            }
+
+            
+        }
+    </script>
+  </body>
+</html>

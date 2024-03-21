@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 25</title>
+  </head>
+  <body style="text-align: center; padding-right: 100px">
+    <h4>
+        program to check whether a given positive number is a multiple of 3 or 7
+    </h4>
+    <label for="input"> Enter The Number:</label>
+    <input type="text" id="input" value="" placeholder="Enter The Number" />
+    <br /><br />
+    <button onclick="check()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+      function check() {
+        var number = parseInt(document.getElementById("input").value);
+
+
+        if(number > 0)
+        {
+            if (( number % 3 == 0 ) || ( number % 7 == 0 ))
+            {
+                document.getElementById("output").innerHTML = number + " Is A Multiple Of 3 or 7 ";
+            }
+            else {
+                document.getElementById("output").innerHTML = number + " Is Not A Multiple Of 3 or 7 ";
+            }
+        }
+        else
+        {
+            document.getElementById("output").innerHTML = "Number Should Be Positive";
+        }
+        
+      }
+    </script>
+  </body>
+</html>

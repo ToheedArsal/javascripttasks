@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 27</title>
+  </head>
+  <body style="text-align: center; padding-right: 100px">
+    <h4>
+        program to check whether a string starts with 'Java'
+    </h4>
+    <label for="input"> Enter The String :</label>
+    <input type="text" id="input" value="" placeholder="Enter The String" />
+    <br /><br />
+    <button onclick="check()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+      function check() {
+        var str = document.getElementById("input").value;
+
+        if (str.length > 3) 
+        {
+            if( str = str.substring(0,4)  == "Java")
+            {
+                document.getElementById("output").innerHTML = "String Starts With Java ";
+            }
+            else
+            {
+                document.getElementById("output").innerHTML = "String Does Not Starts With Java ";
+            }
+          
+        }else {
+          document.getElementById("output").innerHTML = "Invalid String";
+        }
+      }
+    </script>
+  </body>
+</html>

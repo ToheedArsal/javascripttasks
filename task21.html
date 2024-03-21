@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 21</title>
+</head>
+<body style="text-align: center; padding-right: 100px;">
+    <h4>Program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.</h4>
+    <label for="input"> Enter The String :</label>
+    <input type="text" id="input" value="" placeholder="Enter The String">
+    <button onclick="createNewString()"> Submit </button>
+    <p id="output"></p>
+
+
+    <script>
+        function createNewString()
+        {
+            var str = document.getElementById("input").value;
+
+            if( str == null || str == undefined)
+            {
+                document.getElementById("output").innerHTML == "Invalid Input";
+            }
+            else if (str.substring(0,2) == "Py" || str.substring(0,2) == "py")
+            {
+                document.getElementById("output").innerHTML = "Result Is : " + str;
+            }
+            else
+            {
+                str = "Py" + str;
+                document.getElementById("output").innerHTML = "Result Is : " + str;
+            }
+        }
+    </script>
+</body>
+
+</html>
