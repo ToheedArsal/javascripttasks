@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 36</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h2>Write a JavaScript program that checks whether the last digit of three positive integers is the same</h2>
+    <label for="number1"> Number 1 :</label>
+    <input type="text" id="number1"  placeholder="Enter The First Number" required>
+    <br> <br>
+
+    <label for="number2"> Number 2 :</label>
+    <input type="text" id="number2"  placeholder="Enter The  Second Number" required>
+    <br> <br>
+
+    <label for="number3"> Number 3 :</label>
+    <input type="text" id="number3"  placeholder="Enter The Third Number" required>
+    <br> <br>
+
+    <button onclick="check()">Check</button>
+    <p id="output"></p>
+    
+
+    <script>
+        function check()
+        {
+            var number1 = parseInt (document.getElementById("number1").value);
+            var number2 = parseInt (document.getElementById("number2").value);
+            var number3 = parseInt (document.getElementById("number3").value);
+
+            if ( number1 == NaN || number2 == NaN || number3 == NaN )
+            {
+                document.getElementById("output").innerHTML = "Invalid Input";
+            }
+            else
+            {
+                number1 = Math.abs(number1);
+                number2 = Math.abs(number2);
+                number3 = Math.abs(number3);
+
+                if (( number1 % 10 == number2 % 10 ) && ( number1 % 10 == number3 % 10))
+                {
+                    document.getElementById("output").innerHTML = "The Last Digit Is The Same";
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML = "The Last Digit Is Not The Same";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

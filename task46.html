@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 46</title>
+  </head>
+  <body style="text-align: center; padding-top: 100px">
+    <h2>
+      program to check two given non-negative integers if one (not both) is a
+      multiple of 7 or 11.
+    </h2>
+    <label for="number1"> Number 1 :</label>
+    <input
+      type="text"
+      id="number1"
+      placeholder="Enter The First Number"
+      required
+    />
+    <br />
+    <br />
+
+    <label for="number2"> Number 2 :</label>
+    <input
+      type="text"
+      id="number2"
+      placeholder="Enter The  Second Number"
+      required
+    />
+    <br />
+    <br />
+
+    <button onclick="check()">Check</button>
+    <p id="output"></p>
+
+    <script>
+      function check() {
+        var number1 = parseInt(document.getElementById("number1").value);
+        var number2 = parseInt(document.getElementById("number2").value);
+
+        if (number1 == NaN || number2 == NaN) {
+          document.getElementById("output").innerHTML = "Invalid Input";
+        } else if (number1 < 0 || number2 < 0) {
+          document.getElementById("output").innerHTML =
+            "Integer(s) Is Negative";
+        } else {
+          if (number1 % 7 == 0 || number1 % 11 == 0) {
+            document.getElementById("output").innerHTML =
+              "Number1 is a multiple of 7 or 11";
+          } else if (number2 % 7 == 0 || number2 % 11 == 0) {
+            document.getElementById("output").innerHTML =
+              "Number2 is a multiple of 7 or 11";
+          } else {
+            document.getElementById("output").innerHTML =
+              "None of them is a multiple of 7 or 11";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

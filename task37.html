@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 37</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h4>program to produce a new string that has the first 3 characters in lower case from a given string.</h4>
+
+    <label for="input">Enter The String : </label>
+    <input type="text" value="" id="input" placeholder="Enter The String">
+    <br> <br>
+    <p id="output">
+
+    </p>
+
+    <button onclick="generateString()">Submit</button>
+    
+</body>
+
+    <script>
+        function generateString()
+        {
+            var str = document.getElementById("input").value;
+
+            if ( str.length < 3)
+            {
+                str = str.toUpperCase();
+                document.getElementById("output").innerHTML = "Output String Is :" + str;
+            }
+            else
+            {
+                str= str.substring(0,3).toLowerCase() + str.substring(3, str.length);
+                document.getElementById("output").innerHTML = "Output String Is :" + str;
+            }
+        }
+    </script>
+    
+</html>

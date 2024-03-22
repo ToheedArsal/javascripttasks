@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 48</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h2>program to reverse a given string.  </h2>
+    <label for="str"> Enter The String :</label>
+    <input type="text" id="str"  placeholder="Enter The String">
+    <br> <br>
+
+    <button onclick="reverse()">Check</button>
+    <p id="output"></p>
+    
+
+    <script>
+        function reverse()
+        {
+            var str = document.getElementById("str").value;
+
+            if ( str == "" )
+            {
+                document.getElementById("output").innerHTML = "Invalid Input";
+            }
+            else
+            {
+                var reversedStr=""
+                for ( let i = str.length - 1; i >= 0; i--)
+                {
+                    reversedStr += str[i];
+                }
+                document.getElementById("output").innerHTML = "Reversed String Is :" + reversedStr;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 38</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+    
+
+    <h3>Program to evaluate a student's total marks across various examinations and determine their grade</h3>
+
+    <label for="marks">Enter The Marks :</label>
+    <input type="text" value="" id="marks" placeholder="Enter The Marks">
+    <br><br>
+
+    <label for="type">Choose Type:</label>
+    <select id="type">
+    <option value="finalExam">Final Exam</option>
+    <option value="notFinalExam">Not A Final Exam</option>
+    </select>
+    <br><br>
+    <button onclick="check()">Submit</button>
+
+    <p id="output">
+
+    </p>
+
+    <script>
+        function check()
+        {
+            var marks = parseFloat (document.getElementById("marks").value);
+            var type = document.getElementById("type").value;
+            var grade;
+            console.log(type);
+
+
+            if ( marks < 0 || marks > 100)
+            {
+                document.getElementById("output").innerHTML = "Invalid Input";
+            }
+            else
+            {
+                if (( type == "finalExam") && ( marks >= 90 && marks <= 100))
+                {
+                    document.getElementById("output").innerHTML = "A+ Grade";
+                }
+                else if (( type == "notFinalExam") && ( marks >= 89 && marks <= 100))
+                {
+                    document.getElementById("output").innerHTML = "A+ Grade";
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML = "Opps, Not A+ Grade";
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

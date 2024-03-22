@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 40</title>
+</head>
+<body style="text-align: center; padding-top: 100px;">
+
+    <h2>program to check from two given integers whether one of them is 8 or their sum or difference is 8.</h2>
+    <label for="number1"> Number 1 :</label>
+    <input type="text" id="number1"  placeholder="Enter The First Number" required>
+    <br> <br>
+
+    <label for="number2"> Number 2 :</label>
+    <input type="text" id="number2"  placeholder="Enter The  Second Number" required>
+    <br> <br>
+
+    <button onclick="check()">Check</button>
+    <p id="output"></p>
+    
+
+    <script>
+        function check()
+        {
+            var number1 = parseFloat (document.getElementById("number1").value);
+            var number2 = parseFloat (document.getElementById("number2").value);
+
+            if ( number1 == NaN || number2 == NaN )
+            {
+                document.getElementById("output").innerHTML = "Invalid Input";
+            }
+            else
+            {
+                if ( number1 == 8 || number2 == 8 )
+                {
+                    document.getElementById("output").innerHTML = "One Of Them Is 8";
+                }
+                else if( number1 + number2 == 8)
+                {
+                    document.getElementById("output").innerHTML = "Their Sum Is 8";
+                }
+                else if( number1 - number2 == 8)
+                {
+                    document.getElementById("output").innerHTML = "Their Difference Is 8";
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML = "One of the condition is satisfied";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
