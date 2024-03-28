@@ -8,16 +8,10 @@ function valueAtIndex(arr, index) {
 
 const arr = [1, 2, 3];
 
-
-
-try
-{
-    valueAtIndex(arr, 4);
-}
-catch ( error )
-{
-    if ( error instanceof RangeError)
-    {
-        console.log(error.message);
-    }
+try {
+  valueAtIndex(arr, 4);
+} catch (error) {
+  if (error instanceof RangeError) {
+    console.log(error.message);
+  }
 }
